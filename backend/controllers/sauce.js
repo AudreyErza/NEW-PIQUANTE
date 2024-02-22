@@ -21,9 +21,9 @@ console.log = "Objet créé"
 };
 
 exports.getOneSauce = (req, res,next) => {
-    Sauce.findOne({_id: req.params.id})
+    Sauce.findOne({_id:req.params.id})
     .then((sauce) => res.status(200).json(sauce))
-    .catch(error => { res.status(400).json( { error })})
+    .catch(error => { res.status(400).json({error})})
 };
 exports.modifySauce = (req, res,next) => {
     const sauceObject = req.file ? {
