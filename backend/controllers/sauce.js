@@ -1,8 +1,8 @@
 const Sauce = require('../models/sauce');
 
-exports.getAllSauces = (req, res,next) => {
+exports.getAllSauces = (req, res, next) => {
     Sauce.find()
-    .then((sauce)=>res.status(200).json({sauce}))
+    .then((sauce)=>res.status(200).json(sauce))
     .catch(error => res.status(400).json({error}))
 };
 exports.createSauce = (req, res,next) => {
@@ -19,7 +19,6 @@ exports.createSauce = (req, res,next) => {
     .catch(error => { res.status(400).json( { error })})
 console.log = "Objet créé"
 };
-
 
 exports.getOneSauce = (req, res,next) => {
     Sauce.findOne({_id: req.params.id})
