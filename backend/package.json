@@ -1,0 +1,23 @@
+{
+  "name": "piquante",
+  "version": "1.0.0",
+  "description": "piquante",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "new-piquante"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.3",
+    "mongoose-unique-validator": "^5.0.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}
