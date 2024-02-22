@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const userRoutes = require('./routes/user');
-const sauceRoutes = require('./routes/sauce');
+// const sauceRoutes = require('./routes/sauce');
 
 mongoose.connect('mongodb+srv://byaudreyyy:ludo@cluster0.ph2qypv.mongodb.net/piquante?retryWrites=true&w=majority',
   { useNewUrlParser: true,
@@ -19,8 +19,8 @@ app.use((req, res, next) => {
     res.setHeader('Content-Security-Policy',"default-src 'self' ");
     next();
   });
-  
+
 app.use(express.json());
 app.use('/api/auth', userRoutes);
-app.use('/api/sauces', sauceRoutes);
+// app.use('/api/sauces', sauceRoutes);
 module.exports = app;
