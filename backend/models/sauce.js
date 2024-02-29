@@ -10,8 +10,8 @@ mainPepper: {type: String,required: true,},
 heat: {type: Number,required: true,},
 likes: {type: Number,default:0},
 dislikes: {type: Number,default:0},
-userLiked: {type: Array,default:[]},
-userDisliked: {type: Array,default:[]},
+usersLiked: {type: Array,default:[]},
+usersDisliked: {type: Array,default:[]},
 
 });
 
