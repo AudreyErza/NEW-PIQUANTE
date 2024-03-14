@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const dotenv = require("dotenv").config();
+const dotenv = require('dotenv').config();
+const helmet = require('helmet');
 const path = require('path');
 const userRoutes = require('./routes/user');
 const sauceRoutes = require('./routes/sauce');
@@ -21,6 +22,9 @@ app.use((req, res, next) => {
   });
 
 app.use(express.json());
+app.use(helmet({crossOriginResourcePolicy: false,}
+
+));
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/api/sauces', sauceRoutes);
 app.use('/api/auth', userRoutes);
